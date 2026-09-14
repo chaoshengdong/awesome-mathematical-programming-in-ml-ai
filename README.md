@@ -4,10 +4,8 @@
 
 **A guide to the models behind learning, retrieval, recommendation, and AI systems.**
 
-[![Applications: 30](https://img.shields.io/badge/applications-30-2563eb)](#taxonomy)
-[![Paradigms: 10](https://img.shields.io/badge/paradigms-10-0f766e)](#taxonomy)
 [![arXiv: 2609.07254](https://img.shields.io/badge/arXiv-2609.07254-b31b1b)](https://arxiv.org/abs/2609.07254)
-[![References: 36](https://img.shields.io/badge/references-36-7c3aed)](data/applications.json)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 [Paper on arXiv](https://arxiv.org/abs/2609.07254) · [Explore the taxonomy](#taxonomy) · [Modeling guide](docs/modeling-guide.md) · [Contribute](CONTRIBUTING.md)
 
@@ -37,6 +35,7 @@ Read the [paper on arXiv](https://arxiv.org/abs/2609.07254) for the full formula
 - [Research challenges](#research-challenges)
 - [Contributing](#contributing)
 - [Citation](#citation)
+- [License](#license)
 - [Acknowledgment](#acknowledgment)
 
 ## Paper and repository
@@ -438,6 +437,10 @@ If this repository supports your work, please cite the paper:
 ```
 
 Please also cite the original papers for the individual methods or formulations you use. Their records are collected in the [application and reference catalog](data/applications.json).
+
+## License
+
+This repository is released under the [MIT License](LICENSE), copyright © 2026 Chaosheng Dong. Linked research papers retain their respective licenses.
 
 ## Acknowledgment
 
