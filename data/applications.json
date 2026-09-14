@@ -1,0 +1,909 @@
+{
+  "schema_version": 2,
+  "description": "Curated companion catalog for the survey on arXiv. Relationship labels report the survey's classifications; see the modeling guide for qualifications.",
+  "survey_url": "https://arxiv.org/abs/2609.07254",
+  "paradigms": [
+    {
+      "id": "linear-programming",
+      "name": "Linear Programming",
+      "application_count": 2
+    },
+    {
+      "id": "quadratic-programming",
+      "name": "Quadratic Programming",
+      "application_count": 1
+    },
+    {
+      "id": "binary-and-mixed-integer-programming",
+      "name": "Binary and Mixed-Integer Programming",
+      "application_count": 12
+    },
+    {
+      "id": "conic-programming",
+      "name": "Conic Programming",
+      "application_count": 2
+    },
+    {
+      "id": "bilevel-programming",
+      "name": "Bilevel Programming",
+      "application_count": 5
+    },
+    {
+      "id": "multi-objective-optimization",
+      "name": "Multi-Objective Optimization",
+      "application_count": 1
+    },
+    {
+      "id": "inverse-optimization",
+      "name": "Inverse Optimization",
+      "application_count": 1
+    },
+    {
+      "id": "distributionally-robust-optimization",
+      "name": "Distributionally Robust Optimization",
+      "application_count": 2
+    },
+    {
+      "id": "submodular-optimization",
+      "name": "Submodular Optimization",
+      "application_count": 3
+    },
+    {
+      "id": "min-max-optimization",
+      "name": "Min–Max and Saddle-Point Optimization",
+      "application_count": 1
+    }
+  ],
+  "applications": [
+    {
+      "id": 1,
+      "anchor": "app-01",
+      "title": "Compressed Sensing",
+      "taxonomy_title": "Compressed sensing",
+      "paradigm_id": "linear-programming",
+      "classification": "LP",
+      "main_decision_variable": "Sparse signal x, absolute-value epigraph",
+      "principal_constraint": "Linear measurements; ℓ_1 epigraph",
+      "relationship": "Equivalent formulation",
+      "representative_citation_keys": [
+        "donoho2006compressed"
+      ],
+      "all_application_citation_keys": [
+        "donoho2006compressed"
+      ]
+    },
+    {
+      "id": 2,
+      "anchor": "app-02",
+      "title": "Min-Cost Network Flow for Multi-Object Tracking",
+      "taxonomy_title": "Min-cost network flow for multi-object tracking",
+      "paradigm_id": "linear-programming",
+      "classification": "LP (network flow)",
+      "main_decision_variable": "Detection and transition flows",
+      "principal_constraint": "Flow conservation, capacities, source/sink",
+      "relationship": "Explicit formulation",
+      "representative_citation_keys": [
+        "zhang2008tracking"
+      ],
+      "all_application_citation_keys": [
+        "zhang2008tracking"
+      ]
+    },
+    {
+      "id": 3,
+      "anchor": "app-03",
+      "title": "Local Reconstruction Weights in Locally Linear Embedding",
+      "taxonomy_title": "Local reconstruction weights in LLE",
+      "paradigm_id": "quadratic-programming",
+      "classification": "QP",
+      "main_decision_variable": "Neighbor weights w_ij",
+      "principal_constraint": "linear sum-to-one; neighborhood support",
+      "relationship": "Explicit formulation",
+      "representative_citation_keys": [
+        "roweis2000lle"
+      ],
+      "all_application_citation_keys": [
+        "roweis2000lle"
+      ]
+    },
+    {
+      "id": 4,
+      "anchor": "app-04",
+      "title": "RAG Context Selection under a Token Budget",
+      "taxonomy_title": "RAG context selection",
+      "paradigm_id": "binary-and-mixed-integer-programming",
+      "classification": "BIP/MMKP",
+      "main_decision_variable": "Passage indicators z_i",
+      "principal_constraint": "Token/resource budgets; group choice",
+      "relationship": "Explicit formulation",
+      "representative_citation_keys": [
+        "xu2026selfcorrecting"
+      ],
+      "all_application_citation_keys": [
+        "xu2026selfcorrecting"
+      ]
+    },
+    {
+      "id": 5,
+      "anchor": "app-05",
+      "title": "Mixture-of-Experts Routing",
+      "taxonomy_title": "Mixture-of-experts routing",
+      "paradigm_id": "binary-and-mixed-integer-programming",
+      "classification": "BIP",
+      "main_decision_variable": "Token–expert assignments z_ik",
+      "principal_constraint": "Per-token assignment; expert capacity",
+      "relationship": "Natural MP reformulation",
+      "representative_citation_keys": [
+        "zhou2022expertchoice"
+      ],
+      "all_application_citation_keys": [
+        "zhou2022expertchoice"
+      ]
+    },
+    {
+      "id": 6,
+      "anchor": "app-06",
+      "title": "Tool or Agent-Component Selection",
+      "taxonomy_title": "Tool or agent-component selection",
+      "paradigm_id": "binary-and-mixed-integer-programming",
+      "classification": "BIP",
+      "main_decision_variable": "Component indicators z_i",
+      "principal_constraint": "Budget and incompatibility constraints",
+      "relationship": "Explicit formulation",
+      "representative_citation_keys": [
+        "yuan2025agentcomposition"
+      ],
+      "all_application_citation_keys": [
+        "yuan2025agentcomposition"
+      ]
+    },
+    {
+      "id": 7,
+      "anchor": "app-07",
+      "title": "Notification/Email Allocation and Frequency Optimization",
+      "taxonomy_title": "Notification/email allocation and frequency",
+      "paradigm_id": "binary-and-mixed-integer-programming",
+      "classification": "BIP",
+      "main_decision_variable": "User–message–time indicators",
+      "principal_constraint": "Frequency, channel, quota, and global budgets",
+      "relationship": "Natural MP reformulation",
+      "representative_citation_keys": [
+        "zhang2020billion",
+        "zhao2018notification"
+      ],
+      "all_application_citation_keys": [
+        "zhang2020billion",
+        "zhao2018notification"
+      ]
+    },
+    {
+      "id": 8,
+      "anchor": "app-08",
+      "title": "Test-Time Reasoning and Exploration-Budget Allocation",
+      "taxonomy_title": "Test-time reasoning and exploration budget",
+      "paradigm_id": "binary-and-mixed-integer-programming",
+      "classification": "BIP/MCKP",
+      "main_decision_variable": "Query–compute-level choices",
+      "principal_constraint": "Exactly one level; global compute",
+      "relationship": "Natural MP reformulation",
+      "representative_citation_keys": [
+        "snell2025testtime"
+      ],
+      "all_application_citation_keys": [
+        "snell2025testtime"
+      ]
+    },
+    {
+      "id": 9,
+      "anchor": "app-09",
+      "title": "Optimal Decision-Tree Construction",
+      "taxonomy_title": "Optimal decision-tree construction",
+      "paradigm_id": "binary-and-mixed-integer-programming",
+      "classification": "MILP",
+      "main_decision_variable": "Splits, leaf assignments, predictions",
+      "principal_constraint": "Tree logic and misclassification linearization",
+      "relationship": "Explicit formulation",
+      "representative_citation_keys": [
+        "bertsimas2017oct"
+      ],
+      "all_application_citation_keys": [
+        "bertsimas2017oct"
+      ]
+    },
+    {
+      "id": 10,
+      "anchor": "app-10",
+      "title": "Best Subset Selection",
+      "taxonomy_title": "Best subset selection",
+      "paradigm_id": "binary-and-mixed-integer-programming",
+      "classification": "MIQP",
+      "main_decision_variable": "Coefficients θ_j, indicators z_j",
+      "principal_constraint": "Cardinality and coefficient linking",
+      "relationship": "Explicit formulation",
+      "representative_citation_keys": [
+        "bertsimas2016subset"
+      ],
+      "all_application_citation_keys": [
+        "bertsimas2016subset"
+      ]
+    },
+    {
+      "id": 11,
+      "anchor": "app-11",
+      "title": "Constrained Maximum-Inner-Product Retrieval",
+      "taxonomy_title": "Constrained maximum-inner-product retrieval",
+      "paradigm_id": "binary-and-mixed-integer-programming",
+      "classification": "MILP/MIQP",
+      "main_decision_variable": "Retrieved-item indicators z_i",
+      "principal_constraint": "Cardinality, coverage/fairness; pairwise diversity",
+      "relationship": "Natural MP reformulation",
+      "representative_citation_keys": [
+        "hirata2023categorical"
+      ],
+      "all_application_citation_keys": [
+        "hirata2023categorical"
+      ]
+    },
+    {
+      "id": 12,
+      "anchor": "app-12",
+      "title": "Mixed-Precision Neural-Network Quantization",
+      "taxonomy_title": "Mixed-precision neural-network quantization",
+      "paradigm_id": "binary-and-mixed-integer-programming",
+      "classification": "BIP/ILP",
+      "main_decision_variable": "Layer–bit-width assignments",
+      "principal_constraint": "Exactly one width; size or latency budget",
+      "relationship": "Explicit formulation",
+      "representative_citation_keys": [
+        "yao2021hawq"
+      ],
+      "all_application_citation_keys": [
+        "yao2021hawq"
+      ]
+    },
+    {
+      "id": 13,
+      "anchor": "app-13",
+      "title": "Diversity-Aware Recommendation",
+      "taxonomy_title": "Diversity-aware recommendation",
+      "paradigm_id": "binary-and-mixed-integer-programming",
+      "classification": "BQP/MIQP",
+      "main_decision_variable": "List indicators z_i",
+      "principal_constraint": "Cardinality; pairwise similarity penalty",
+      "relationship": "Natural MP reformulation",
+      "representative_citation_keys": [
+        "zhang2008monotony"
+      ],
+      "all_application_citation_keys": [
+        "zhang2008monotony"
+      ]
+    },
+    {
+      "id": 14,
+      "anchor": "app-14",
+      "title": "k-Means Clustering",
+      "taxonomy_title": "Globally optimized k-means clustering",
+      "paradigm_id": "binary-and-mixed-integer-programming",
+      "classification": "MIQP/ MINLP/ MILP",
+      "main_decision_variable": "Assignments z_ik, centroids μ_k",
+      "principal_constraint": "Exactly one cluster; assignment–centroid coupling",
+      "relationship": "Explicit formulation",
+      "representative_citation_keys": [
+        "agoston2024kmeans",
+        "burgard2023clustering"
+      ],
+      "all_application_citation_keys": [
+        "agoston2024kmeans",
+        "burgard2023clustering"
+      ]
+    },
+    {
+      "id": 15,
+      "anchor": "app-15",
+      "title": "Video Frame or Keyframe Selection",
+      "taxonomy_title": "Video frame or keyframe selection",
+      "paradigm_id": "binary-and-mixed-integer-programming",
+      "classification": "BQP/IQP",
+      "main_decision_variable": "Frame indicators z_i",
+      "principal_constraint": "Cardinality/temporal budget; pairwise redundancy",
+      "relationship": "Explicit formulation",
+      "representative_citation_keys": [
+        "fang2026keyframe"
+      ],
+      "all_application_citation_keys": [
+        "fang2026keyframe"
+      ]
+    },
+    {
+      "id": 16,
+      "anchor": "app-16",
+      "title": "Group Lasso as SOCP",
+      "taxonomy_title": "Group Lasso",
+      "paradigm_id": "conic-programming",
+      "classification": "SOCP",
+      "main_decision_variable": "Coefficients β_g, epigraphs t_g",
+      "principal_constraint": "Group-norm cones",
+      "relationship": "Equivalent formulation",
+      "representative_citation_keys": [
+        "yuan2006grouplasso"
+      ],
+      "all_application_citation_keys": [
+        "yuan2006grouplasso"
+      ]
+    },
+    {
+      "id": 17,
+      "anchor": "app-17",
+      "title": "Sparse PCA as SDP",
+      "taxonomy_title": "Sparse PCA",
+      "paradigm_id": "conic-programming",
+      "classification": "SDP",
+      "main_decision_variable": "Lifted matrix X\\succeq0",
+      "principal_constraint": "Trace normalization; rank relaxation; sparsity",
+      "relationship": "Explicit formulation",
+      "representative_citation_keys": [
+        "daspremont2004sparsepca"
+      ],
+      "all_application_citation_keys": [
+        "daspremont2004sparsepca"
+      ]
+    },
+    {
+      "id": 18,
+      "anchor": "app-18",
+      "title": "Hyperparameter Optimization",
+      "taxonomy_title": "Hyperparameter optimization",
+      "paradigm_id": "bilevel-programming",
+      "classification": "Bilevel",
+      "main_decision_variable": "Hyperparameters λ, weights θ",
+      "principal_constraint": "Validation outer/training inner",
+      "relationship": "Explicit formulation",
+      "representative_citation_keys": [
+        "franceschi2018bilevel"
+      ],
+      "all_application_citation_keys": [
+        "franceschi2018bilevel"
+      ]
+    },
+    {
+      "id": 19,
+      "anchor": "app-19",
+      "title": "Neural Architecture Search",
+      "taxonomy_title": "Neural architecture search",
+      "paradigm_id": "bilevel-programming",
+      "classification": "Bilevel",
+      "main_decision_variable": "Architecture λ, weights θ",
+      "principal_constraint": "Relaxed architecture outer/weight-training inner",
+      "relationship": "Explicit formulation",
+      "representative_citation_keys": [
+        "liu2019darts"
+      ],
+      "all_application_citation_keys": [
+        "liu2019darts"
+      ]
+    },
+    {
+      "id": 20,
+      "anchor": "app-20",
+      "title": "Coreset Selection and Data Subsampling",
+      "taxonomy_title": "Coreset selection and data subsampling",
+      "paradigm_id": "bilevel-programming",
+      "classification": "Bilevel",
+      "main_decision_variable": "Selection probabilities/indicators and weights",
+      "principal_constraint": "Coreset-size outer; selected-data training inner",
+      "relationship": "Explicit formulation",
+      "representative_citation_keys": [
+        "zhou2022coreset"
+      ],
+      "all_application_citation_keys": [
+        "zhou2022coreset"
+      ]
+    },
+    {
+      "id": 21,
+      "anchor": "app-21",
+      "title": "Autonomous Scientific Discovery and AI Scientist Systems",
+      "taxonomy_title": "Autonomous scientific discovery",
+      "paradigm_id": "bilevel-programming",
+      "classification": "Bilevel",
+      "main_decision_variable": "Objective design λ, candidate design x",
+      "principal_constraint": "Goal-evolution outer; scientific search inner",
+      "relationship": "Equivalent formulation",
+      "representative_citation_keys": [
+        "du2025saga",
+        "ma2024scientific"
+      ],
+      "all_application_citation_keys": [
+        "du2025saga",
+        "ma2024scientific"
+      ]
+    },
+    {
+      "id": 22,
+      "anchor": "app-22",
+      "title": "Diffusion-Model Hyperparameter and Noise-Schedule Optimization",
+      "taxonomy_title": "Diffusion hyperparameter/noise-schedule optimization",
+      "paradigm_id": "bilevel-programming",
+      "classification": "Bilevel",
+      "main_decision_variable": "Schedule λ, diffusion parameters θ",
+      "principal_constraint": "Quality outer; training/inference inner",
+      "relationship": "Explicit formulation",
+      "representative_citation_keys": [
+        "xiao2025diffusion"
+      ],
+      "all_application_citation_keys": [
+        "xiao2025diffusion"
+      ]
+    },
+    {
+      "id": 23,
+      "anchor": "app-23",
+      "title": "Multi-Task Learning",
+      "taxonomy_title": "Multi-task learning",
+      "paradigm_id": "multi-objective-optimization",
+      "classification": "Multi-objective",
+      "main_decision_variable": "Shared/task model parameters θ",
+      "principal_constraint": "Pareto order; simplex gradient QP",
+      "relationship": "Explicit formulation",
+      "representative_citation_keys": [
+        "sener2018multitask"
+      ],
+      "all_application_citation_keys": [
+        "momma2022multi",
+        "sener2018multitask"
+      ]
+    },
+    {
+      "id": 24,
+      "anchor": "app-24",
+      "title": "Inverse Reinforcement Learning",
+      "taxonomy_title": "Inverse reinforcement learning",
+      "paradigm_id": "inverse-optimization",
+      "classification": "Inverse optimization",
+      "main_decision_variable": "Reward weights θ",
+      "principal_constraint": "Expert policy optimality/Bellman inequalities",
+      "relationship": "Explicit formulation",
+      "representative_citation_keys": [
+        "ng2000irl"
+      ],
+      "all_application_citation_keys": [
+        "dong2018generalized",
+        "dong2024towards",
+        "ng2000irl"
+      ]
+    },
+    {
+      "id": 25,
+      "anchor": "app-25",
+      "title": "Contrastive Learning as DRO",
+      "taxonomy_title": "Contrastive learning as DRO",
+      "paradigm_id": "distributionally-robust-optimization",
+      "classification": "DRO",
+      "main_decision_variable": "Encoder parameters θ, negative law Q",
+      "principal_constraint": "Divergence ambiguity around empirical negatives",
+      "relationship": "Explicit formulation",
+      "representative_citation_keys": [
+        "wu2023contrastive"
+      ],
+      "all_application_citation_keys": [
+        "wu2023contrastive"
+      ]
+    },
+    {
+      "id": 26,
+      "anchor": "app-26",
+      "title": "Distributionally Robust DPO for LLM Alignment",
+      "taxonomy_title": "Distributionally robust DPO",
+      "paradigm_id": "distributionally-robust-optimization",
+      "classification": "DRO",
+      "main_decision_variable": "Policy parameters θ, preference law Q",
+      "principal_constraint": "Wasserstein or KL ambiguity set",
+      "relationship": "Explicit formulation",
+      "representative_citation_keys": [
+        "xu2025robustdpo"
+      ],
+      "all_application_citation_keys": [
+        "xu2025robustdpo"
+      ]
+    },
+    {
+      "id": 27,
+      "anchor": "app-27",
+      "title": "Data Subset Selection and Active Learning",
+      "taxonomy_title": "Data subset selection and active learning",
+      "paradigm_id": "submodular-optimization",
+      "classification": "Submodular",
+      "main_decision_variable": "Selected set S",
+      "principal_constraint": "Cardinality; diminishing returns",
+      "relationship": "Explicit formulation",
+      "representative_citation_keys": [
+        "wei2015submodularity"
+      ],
+      "all_application_citation_keys": [
+        "wei2015submodularity"
+      ]
+    },
+    {
+      "id": 28,
+      "anchor": "app-28",
+      "title": "Document Summarization",
+      "taxonomy_title": "Document summarization",
+      "paradigm_id": "submodular-optimization",
+      "classification": "Submodular",
+      "main_decision_variable": "Selected sentence set S",
+      "principal_constraint": "Word budget; coverage and diversity",
+      "relationship": "Explicit formulation",
+      "representative_citation_keys": [
+        "lin2011summarization"
+      ],
+      "all_application_citation_keys": [
+        "lin2011summarization"
+      ]
+    },
+    {
+      "id": 29,
+      "anchor": "app-29",
+      "title": "KV-Cache Eviction for LLM Inference",
+      "taxonomy_title": "KV-cache eviction for LLM inference",
+      "paradigm_id": "submodular-optimization",
+      "classification": "Submodular",
+      "main_decision_variable": "Retained token set S_τ",
+      "principal_constraint": "Dynamic cache budget; heavy hitters plus recency",
+      "relationship": "Explicit formulation",
+      "representative_citation_keys": [
+        "zhang2023h2o"
+      ],
+      "all_application_citation_keys": [
+        "zhang2023h2o"
+      ]
+    },
+    {
+      "id": 30,
+      "anchor": "app-30",
+      "title": "Generative Adversarial Networks",
+      "taxonomy_title": "Generative adversarial networks",
+      "paradigm_id": "min-max-optimization",
+      "classification": "Min–max",
+      "main_decision_variable": "Generator G, discriminator D",
+      "principal_constraint": "Two-player saddle objective",
+      "relationship": "Explicit formulation",
+      "representative_citation_keys": [
+        "goodfellow2014gan"
+      ],
+      "all_application_citation_keys": [
+        "goodfellow2014gan"
+      ]
+    }
+  ],
+  "references": {
+    "donoho2006compressed": {
+      "key": "donoho2006compressed",
+      "title": "Compressed Sensing",
+      "authors": "Donoho, David L.",
+      "venue": "IEEE Transactions on Information Theory",
+      "year": 2006,
+      "url": "https://doi.org/10.1109/TIT.2006.871582",
+      "doi": "10.1109/TIT.2006.871582",
+      "pages": "1289–1306"
+    },
+    "zhang2008tracking": {
+      "key": "zhang2008tracking",
+      "title": "Global Data Association for Multi-Object Tracking Using Network Flows",
+      "authors": "Zhang, Li and Li, Yuan and Nevatia, Ramakant",
+      "venue": "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition",
+      "year": 2008,
+      "url": "https://doi.org/10.1109/CVPR.2008.4587584",
+      "doi": "10.1109/CVPR.2008.4587584",
+      "pages": "1–8"
+    },
+    "roweis2000lle": {
+      "key": "roweis2000lle",
+      "title": "Nonlinear Dimensionality Reduction by Locally Linear Embedding",
+      "authors": "Roweis, Sam T. and Saul, Lawrence K.",
+      "venue": "Science",
+      "year": 2000,
+      "url": "https://doi.org/10.1126/science.290.5500.2323",
+      "doi": "10.1126/science.290.5500.2323",
+      "pages": "2323–2326"
+    },
+    "xu2026selfcorrecting": {
+      "key": "xu2026selfcorrecting",
+      "title": "Self-Correcting RAG: Enhancing Faithfulness via MMKP Context Selection and NLI-Guided MCTS",
+      "authors": "Xu, Shijia and Wu, Zhou and Jia, Xiaolong and Wang, Yu and Liu, Kai and Dong, April Xiaowen",
+      "venue": "arXiv preprint arXiv:2604.10734",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2604.10734",
+      "doi": "10.48550/arXiv.2604.10734"
+    },
+    "zhou2022expertchoice": {
+      "key": "zhou2022expertchoice",
+      "title": "Mixture-of-Experts with Expert Choice Routing",
+      "authors": "Zhou, Yanqi and Lei, Tao and Liu, Hanxiao and Du, Nan and Huang, Yanping and Zhao, Vincent Y. and Dai, Andrew M. and Chen, Zhifeng and Le, Quoc V. and Laudon, James",
+      "venue": "Advances in Neural Information Processing Systems",
+      "year": 2022,
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/2f00ecd787b432c1d36f3de9800728eb-Abstract-Conference.html",
+      "doi": "10.52202/068431-0515"
+    },
+    "yuan2025agentcomposition": {
+      "key": "yuan2025agentcomposition",
+      "title": "Automated Composition of Agents: A Knapsack Approach for Agentic Component Selection",
+      "authors": "Yuan, Michelle and Pahwa, Khushbu and Chang, Shuaichen and Kaba, Mustafa and Jiang, Jiarong and Ma, Xiaofei and Zhang, Yi and Sunkara, Monica",
+      "venue": "Advances in Neural Information Processing Systems",
+      "year": 2025,
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/39c51d0fe64c273413a4d358361b3daa-Abstract-Conference.html"
+    },
+    "zhao2018notification": {
+      "key": "zhao2018notification",
+      "title": "Notification Volume Control and Optimization System at Pinterest",
+      "authors": "Zhao, Bo and Narita, Koichiro and Orten, Burkay and Egan, John",
+      "venue": "Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+      "year": 2018,
+      "url": "https://doi.org/10.1145/3219819.3219906",
+      "doi": "10.1145/3219819.3219906",
+      "pages": "1012–1020"
+    },
+    "zhang2020billion": {
+      "key": "zhang2020billion",
+      "title": "Solving Billion-Scale Knapsack Problems",
+      "authors": "Zhang, Xingwen and Qi, Feng and Hua, Zhigang and Yang, Shuang",
+      "venue": "Proceedings of The Web Conference 2020",
+      "year": 2020,
+      "url": "https://doi.org/10.1145/3366423.3380084",
+      "doi": "10.1145/3366423.3380084",
+      "pages": "3105–3111"
+    },
+    "snell2025testtime": {
+      "key": "snell2025testtime",
+      "title": "Scaling LLM Test-Time Compute Optimally Can Be More Effective than Scaling Model Parameters",
+      "authors": "Snell, Charlie and Lee, Jaehoon and Xu, Kelvin and Kumar, Aviral",
+      "venue": "The Thirteenth International Conference on Learning Representations",
+      "year": 2025,
+      "url": "https://openreview.net/forum?id=4FWaWZtd2n"
+    },
+    "bertsimas2017oct": {
+      "key": "bertsimas2017oct",
+      "title": "Optimal Classification Trees",
+      "authors": "Bertsimas, Dimitris and Dunn, Jack",
+      "venue": "Machine Learning",
+      "year": 2017,
+      "url": "https://doi.org/10.1007/s10994-017-5633-9",
+      "doi": "10.1007/s10994-017-5633-9",
+      "pages": "1039–1082"
+    },
+    "bertsimas2016subset": {
+      "key": "bertsimas2016subset",
+      "title": "Best Subset Selection via a Modern Optimization Lens",
+      "authors": "Bertsimas, Dimitris and King, Angela and Mazumder, Rahul",
+      "venue": "The Annals of Statistics",
+      "year": 2016,
+      "url": "https://doi.org/10.1214/15-AOS1388",
+      "doi": "10.1214/15-AOS1388",
+      "pages": "813–852"
+    },
+    "hirata2023categorical": {
+      "key": "hirata2023categorical",
+      "title": "Categorical Diversity-Aware Inner Product Search",
+      "authors": "Hirata, Kohei and Amagata, Daichi and Fujita, Sumio and Hara, Takahiro",
+      "venue": "IEEE Access",
+      "year": 2023,
+      "url": "https://doi.org/10.1109/ACCESS.2023.3234072",
+      "doi": "10.1109/ACCESS.2023.3234072",
+      "pages": "2586–2596"
+    },
+    "yao2021hawq": {
+      "key": "yao2021hawq",
+      "title": "HAWQ-V3: Dyadic Neural Network Quantization",
+      "authors": "Yao, Zhewei and Dong, Zhen and Zheng, Zhangcheng and Gholami, Amir and Yu, Jiali and Tan, Eric and Wang, Leyuan and Huang, Qijing and Wang, Yida and Mahoney, Michael W. and Keutzer, Kurt",
+      "venue": "Proceedings of the 38th International Conference on Machine Learning",
+      "year": 2021,
+      "url": "https://proceedings.mlr.press/v139/yao21a.html",
+      "pages": "11875–11886"
+    },
+    "zhang2008monotony": {
+      "key": "zhang2008monotony",
+      "title": "Avoiding Monotony: Improving the Diversity of Recommendation Lists",
+      "authors": "Zhang, Mi and Hurley, Neil",
+      "venue": "Proceedings of the Second ACM Conference on Recommender Systems",
+      "year": 2008,
+      "url": "https://doi.org/10.1145/1454008.1454030",
+      "doi": "10.1145/1454008.1454030",
+      "pages": "123–130"
+    },
+    "agoston2024kmeans": {
+      "key": "agoston2024kmeans",
+      "title": "Mixed Integer Linear Programming Formulation for K-means Clustering Problem",
+      "authors": "Ágoston, Kolos Cs. and Eisenberg-Nagy, Marianna",
+      "venue": "Central European Journal of Operations Research",
+      "year": 2024,
+      "url": "https://doi.org/10.1007/s10100-023-00881-1",
+      "doi": "10.1007/s10100-023-00881-1",
+      "pages": "11–27"
+    },
+    "burgard2023clustering": {
+      "key": "burgard2023clustering",
+      "title": "Mixed-Integer Programming Techniques for the Minimum Sum-of-Squares Clustering Problem",
+      "authors": "Burgard, Jan Pablo and Costa, Carina Moreira and Hojny, Christopher and Kleinert, Thomas and Schmidt, Martin",
+      "venue": "Journal of Global Optimization",
+      "year": 2023,
+      "url": "https://doi.org/10.1007/s10898-022-01267-4",
+      "doi": "10.1007/s10898-022-01267-4",
+      "pages": "133–189"
+    },
+    "fang2026keyframe": {
+      "key": "fang2026keyframe",
+      "title": "Threading Keyframe with Narratives: MLLMs as Strong Long Video Comprehenders",
+      "authors": "Fang, Bo and Song, Yuxin and Sun, Haoyuan and Wu, Qiangqiang and Wu, Wenhao and Chan, Antoni B.",
+      "venue": "The Fourteenth International Conference on Learning Representations",
+      "year": 2026,
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/675a31be2d051be53d57bced52c6631f-Abstract-Conference.html"
+    },
+    "yuan2006grouplasso": {
+      "key": "yuan2006grouplasso",
+      "title": "Model Selection and Estimation in Regression with Grouped Variables",
+      "authors": "Yuan, Ming and Lin, Yi",
+      "venue": "Journal of the Royal Statistical Society: Series B (Statistical Methodology)",
+      "year": 2006,
+      "url": "https://doi.org/10.1111/j.1467-9868.2005.00532.x",
+      "doi": "10.1111/j.1467-9868.2005.00532.x",
+      "pages": "49–67"
+    },
+    "daspremont2004sparsepca": {
+      "key": "daspremont2004sparsepca",
+      "title": "A Direct Formulation for Sparse PCA Using Semidefinite Programming",
+      "authors": "d'Aspremont, Alexandre and El Ghaoui, Laurent and Jordan, Michael I. and Lanckriet, Gert R. G.",
+      "venue": "Advances in Neural Information Processing Systems",
+      "year": 2004,
+      "url": "https://proceedings.neurips.cc/paper/2628-a-direct-formulation-for-sparse-pca-using-semidefinite-programming",
+      "pages": "41–48"
+    },
+    "franceschi2018bilevel": {
+      "key": "franceschi2018bilevel",
+      "title": "Bilevel Programming for Hyperparameter Optimization and Meta-Learning",
+      "authors": "Franceschi, Luca and Frasconi, Paolo and Salzo, Saverio and Grazzi, Riccardo and Pontil, Massimiliano",
+      "venue": "Proceedings of the 35th International Conference on Machine Learning",
+      "year": 2018,
+      "url": "https://proceedings.mlr.press/v80/franceschi18a.html",
+      "pages": "1568–1577"
+    },
+    "liu2019darts": {
+      "key": "liu2019darts",
+      "title": "DARTS: Differentiable Architecture Search",
+      "authors": "Liu, Hanxiao and Simonyan, Karen and Yang, Yiming",
+      "venue": "The Seventh International Conference on Learning Representations",
+      "year": 2019,
+      "url": "https://openreview.net/forum?id=S1eYHoC5FX"
+    },
+    "zhou2022coreset": {
+      "key": "zhou2022coreset",
+      "title": "Probabilistic Bilevel Coreset Selection",
+      "authors": "Zhou, Xiao and Pi, Renjie and Zhang, Weizhong and Lin, Yong and Chen, Zonghao and Zhang, Tong",
+      "venue": "Proceedings of the 39th International Conference on Machine Learning",
+      "year": 2022,
+      "url": "https://proceedings.mlr.press/v162/zhou22h.html",
+      "pages": "27287–27302"
+    },
+    "du2025saga": {
+      "key": "du2025saga",
+      "title": "Accelerating Scientific Discovery with Autonomous Goal-evolving Agents",
+      "authors": "Du, Yuanqi and Yu, Botao and Liu, Tianyu and Shen, Tony and Chen, Junwu and Rittig, Jan G. and Sun, Kunyang and Zhang, Yikun and Krishnan, Aarti and Zhang, Yu and Rosen, Daniel and Pirone, Rosali and Song, Zhangde and Zhou, Bo and Masschelein, Cassandra and Wang, Yingze and Wang, Haorui and Jia, Haojun and Zhang, Chao and Zhao, Hongyu and Ester, Martin and Hacohen, Nir and Head-Gordon, Teresa and Gomes, Carla P. and Sun, Huan and Duan, Chenru and Schwaller, Philippe and Jin, Wengong",
+      "venue": "arXiv preprint arXiv:2512.21782",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2512.21782",
+      "doi": "10.48550/arXiv.2512.21782"
+    },
+    "ma2024scientific": {
+      "key": "ma2024scientific",
+      "title": "LLM and Simulation as Bilevel Optimizers: A New Paradigm to Advance Physical Scientific Discovery",
+      "authors": "Ma, Pingchuan and Wang, Tsun-Hsuan and Guo, Minghao and Sun, Zhiqing and Tenenbaum, Joshua B. and Rus, Daniela and Gan, Chuang and Matusik, Wojciech",
+      "venue": "Proceedings of the 41st International Conference on Machine Learning",
+      "year": 2024,
+      "url": "https://proceedings.mlr.press/v235/ma24m.html",
+      "pages": "33940–33962"
+    },
+    "xiao2025diffusion": {
+      "key": "xiao2025diffusion",
+      "title": "A First-order Generative Bilevel Optimization Framework for Diffusion Models",
+      "authors": "Xiao, Quan and Yuan, Hui and Saif, A F M and Liu, Gaowen and Kompella, Ramana Rao and Wang, Mengdi and Chen, Tianyi",
+      "venue": "Proceedings of the 42nd International Conference on Machine Learning",
+      "year": 2025,
+      "url": "https://proceedings.mlr.press/v267/xiao25i.html",
+      "pages": "68535–68558"
+    },
+    "sener2018multitask": {
+      "key": "sener2018multitask",
+      "title": "Multi-Task Learning as Multi-Objective Optimization",
+      "authors": "Sener, Ozan and Koltun, Vladlen",
+      "venue": "Advances in Neural Information Processing Systems",
+      "year": 2018,
+      "url": "https://proceedings.neurips.cc/paper/2018/hash/432aca3a1e345e339f35a30c8f65edce-Abstract.html"
+    },
+    "momma2022multi": {
+      "key": "momma2022multi",
+      "title": "A multi-objective/multi-task learning framework induced by pareto stationarity",
+      "authors": "Momma, Michinari and Dong, Chaosheng and Liu, Jia",
+      "venue": "International Conference on Machine Learning",
+      "year": 2022,
+      "url": "https://proceedings.mlr.press/v162/momma22a.html",
+      "pages": "15895–15907"
+    },
+    "ng2000irl": {
+      "key": "ng2000irl",
+      "title": "Algorithms for Inverse Reinforcement Learning",
+      "authors": "Ng, Andrew Y. and Russell, Stuart J.",
+      "venue": "Proceedings of the Seventeenth International Conference on Machine Learning",
+      "year": 2000,
+      "url": "https://ai.stanford.edu/~ang/papers/icml00-irl.pdf",
+      "pages": "663–670"
+    },
+    "dong2018generalized": {
+      "key": "dong2018generalized",
+      "title": "Generalized inverse optimization through online learning",
+      "authors": "Dong, Chaosheng and Chen, Yiran and Zeng, Bo",
+      "venue": "Advances in Neural Information Processing Systems",
+      "year": 2018,
+      "url": "https://proceedings.neurips.cc/paper/2018/hash/28dd2c7955ce926456240b2ff0100bde-Abstract.html"
+    },
+    "dong2024towards": {
+      "key": "dong2024towards",
+      "title": "Towards generalized inverse reinforcement learning",
+      "authors": "Dong, Chaosheng and Wang, Yijia",
+      "venue": "arXiv preprint arXiv:2402.07246",
+      "year": 2024,
+      "url": "https://arxiv.org/abs/2402.07246"
+    },
+    "wu2023contrastive": {
+      "key": "wu2023contrastive",
+      "title": "Understanding Contrastive Learning via Distributionally Robust Optimization",
+      "authors": "Wu, Junkang and Chen, Jiawei and Wu, Jiancan and Shi, Wentao and Wang, Xiang and He, Xiangnan",
+      "venue": "Advances in Neural Information Processing Systems",
+      "year": 2023,
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/48aaa5ea741ae8430bd58e25917d267d-Abstract-Conference.html",
+      "doi": "10.52202/075280-1010"
+    },
+    "xu2025robustdpo": {
+      "key": "xu2025robustdpo",
+      "title": "Robust LLM Alignment via Distributionally Robust Direct Preference Optimization",
+      "authors": "Xu, Zaiyan and Vemuri, Sushil and Panaganti, Kishan and Kalathil, Dileep and Jain, Rahul and Ramachandran, Deepak",
+      "venue": "Advances in Neural Information Processing Systems",
+      "year": 2025,
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/272efd3a6091ceefcbc79f1f3a6fdba4-Abstract-Conference.html",
+      "doi": "10.52202/085713-0912"
+    },
+    "wei2015submodularity": {
+      "key": "wei2015submodularity",
+      "title": "Submodularity in Data Subset Selection and Active Learning",
+      "authors": "Wei, Kai and Iyer, Rishabh and Bilmes, Jeff",
+      "venue": "Proceedings of the 32nd International Conference on Machine Learning",
+      "year": 2015,
+      "url": "https://proceedings.mlr.press/v37/wei15.html",
+      "pages": "1954–1963"
+    },
+    "lin2011summarization": {
+      "key": "lin2011summarization",
+      "title": "A Class of Submodular Functions for Document Summarization",
+      "authors": "Lin, Hui and Bilmes, Jeff",
+      "venue": "Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies",
+      "year": 2011,
+      "url": "https://aclanthology.org/P11-1052/",
+      "pages": "510–520"
+    },
+    "zhang2023h2o": {
+      "key": "zhang2023h2o",
+      "title": "H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models",
+      "authors": "Zhang, Zhenyu and Sheng, Ying and Zhou, Tianyi and Chen, Tianlong and Zheng, Lianmin and Cai, Ruisi and Song, Zhao and Tian, Yuandong and Ré, Christopher and Barrett, Clark and Wang, Zhangyang and Chen, Beidi",
+      "venue": "Advances in Neural Information Processing Systems",
+      "year": 2023,
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/6ceefa7b15572587b78ecfcebb2827f8-Abstract-Conference.html",
+      "doi": "10.52202/075280-1506"
+    },
+    "goodfellow2014gan": {
+      "key": "goodfellow2014gan",
+      "title": "Generative Adversarial Nets",
+      "authors": "Goodfellow, Ian J. and Pouget-Abadie, Jean and Mirza, Mehdi and Xu, Bing and Warde-Farley, David and Ozair, Sherjil and Courville, Aaron and Bengio, Yoshua",
+      "venue": "Advances in Neural Information Processing Systems",
+      "year": 2014,
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2014/hash/f033ed80deb0234979a61f95710dbe25-Abstract.html",
+      "pages": "2672–2680"
+    }
+  }
+}

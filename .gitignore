@@ -1,0 +1,32 @@
+# OS and editor files
+.DS_Store
+._*
+.idea/
+.vscode/
+*.swp
+*~
+
+# Refer readers to arXiv; do not bundle manuscript files.
+/paper/
+*.tex
+*.bib
+*.pdf
+
+# LaTeX build outputs
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+build/
+
+# Python caches
+__pycache__/
+*.py[cod]
+.venv/
