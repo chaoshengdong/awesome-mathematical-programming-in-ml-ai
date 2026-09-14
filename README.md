@@ -17,6 +17,8 @@ The starting point is a practical question: **how do predictions become decision
 
 Read the [paper on arXiv](https://arxiv.org/abs/2609.07254) for the full formulations, notation, assumptions, and limitations. This repository is a literature and modeling companion; it does not provide implementations or benchmarks of the listed methods.
 
+![Overview of mathematical programming models and their applications in machine learning and artificial intelligence](figure/MP%20applications.png)
+
 ## Contents
 
 - [Paper and repository](#paper-and-repository)
