@@ -1,11 +1,11 @@
 name: Reference addition or correction
-description: Suggest a primary paper, author-maintained implementation, or correction within an existing application.
+description: Suggest a primary paper or citation correction within an existing application.
 title: "[Reference] "
 body:
   - type: input
     id: application
     attributes:
-      label: Application number and name
+      label: Application name
       description: Use one of the 30 applications in the README.
     validations:
       required: true
@@ -23,19 +23,3 @@ body:
       description: Include title, authors, venue/status, year, and the correction or addition.
     validations:
       required: true
-  - type: dropdown
-    id: relationship
-    attributes:
-      label: Mathematical-programming relationship
-      options:
-        - Explicit formulation
-        - Equivalent formulation
-        - Natural MP reformulation
-        - Bibliographic or implementation-link correction only
-    validations:
-      required: true
-  - type: textarea
-    id: evidence
-    attributes:
-      label: Formulation evidence and limitations
-      description: Identify the relevant equation, section, or author statement; distinguish a surrogate or relaxation from the original method.

@@ -1,6 +1,6 @@
 {
-  "schema_version": 2,
-  "description": "Curated companion catalog for the survey on arXiv. Relationship labels report the survey's classifications; see the modeling guide for qualifications.",
+  "schema_version": 3,
+  "description": "Curated applications and primary citations accompanying the survey on arXiv.",
   "survey_url": "https://arxiv.org/abs/2609.07254",
   "paradigms": [
     {
@@ -59,16 +59,8 @@
       "id": 1,
       "anchor": "app-01",
       "title": "Compressed Sensing",
-      "taxonomy_title": "Compressed sensing",
       "paradigm_id": "linear-programming",
-      "classification": "LP",
-      "main_decision_variable": "Sparse signal x, absolute-value epigraph",
-      "principal_constraint": "Linear measurements; ℓ_1 epigraph",
-      "relationship": "Equivalent formulation",
-      "representative_citation_keys": [
-        "donoho2006compressed"
-      ],
-      "all_application_citation_keys": [
+      "citation_keys": [
         "donoho2006compressed"
       ]
     },
@@ -76,16 +68,8 @@
       "id": 2,
       "anchor": "app-02",
       "title": "Min-Cost Network Flow for Multi-Object Tracking",
-      "taxonomy_title": "Min-cost network flow for multi-object tracking",
       "paradigm_id": "linear-programming",
-      "classification": "LP (network flow)",
-      "main_decision_variable": "Detection and transition flows",
-      "principal_constraint": "Flow conservation, capacities, source/sink",
-      "relationship": "Explicit formulation",
-      "representative_citation_keys": [
-        "zhang2008tracking"
-      ],
-      "all_application_citation_keys": [
+      "citation_keys": [
         "zhang2008tracking"
       ]
     },
@@ -93,16 +77,8 @@
       "id": 3,
       "anchor": "app-03",
       "title": "Local Reconstruction Weights in Locally Linear Embedding",
-      "taxonomy_title": "Local reconstruction weights in LLE",
       "paradigm_id": "quadratic-programming",
-      "classification": "QP",
-      "main_decision_variable": "Neighbor weights w_ij",
-      "principal_constraint": "linear sum-to-one; neighborhood support",
-      "relationship": "Explicit formulation",
-      "representative_citation_keys": [
-        "roweis2000lle"
-      ],
-      "all_application_citation_keys": [
+      "citation_keys": [
         "roweis2000lle"
       ]
     },
@@ -110,16 +86,8 @@
       "id": 4,
       "anchor": "app-04",
       "title": "RAG Context Selection under a Token Budget",
-      "taxonomy_title": "RAG context selection",
       "paradigm_id": "binary-and-mixed-integer-programming",
-      "classification": "BIP/MMKP",
-      "main_decision_variable": "Passage indicators z_i",
-      "principal_constraint": "Token/resource budgets; group choice",
-      "relationship": "Explicit formulation",
-      "representative_citation_keys": [
-        "xu2026selfcorrecting"
-      ],
-      "all_application_citation_keys": [
+      "citation_keys": [
         "xu2026selfcorrecting"
       ]
     },
@@ -127,16 +95,8 @@
       "id": 5,
       "anchor": "app-05",
       "title": "Mixture-of-Experts Routing",
-      "taxonomy_title": "Mixture-of-experts routing",
       "paradigm_id": "binary-and-mixed-integer-programming",
-      "classification": "BIP",
-      "main_decision_variable": "Token–expert assignments z_ik",
-      "principal_constraint": "Per-token assignment; expert capacity",
-      "relationship": "Natural MP reformulation",
-      "representative_citation_keys": [
-        "zhou2022expertchoice"
-      ],
-      "all_application_citation_keys": [
+      "citation_keys": [
         "zhou2022expertchoice"
       ]
     },
@@ -144,16 +104,8 @@
       "id": 6,
       "anchor": "app-06",
       "title": "Tool or Agent-Component Selection",
-      "taxonomy_title": "Tool or agent-component selection",
       "paradigm_id": "binary-and-mixed-integer-programming",
-      "classification": "BIP",
-      "main_decision_variable": "Component indicators z_i",
-      "principal_constraint": "Budget and incompatibility constraints",
-      "relationship": "Explicit formulation",
-      "representative_citation_keys": [
-        "yuan2025agentcomposition"
-      ],
-      "all_application_citation_keys": [
+      "citation_keys": [
         "yuan2025agentcomposition"
       ]
     },
@@ -161,17 +113,8 @@
       "id": 7,
       "anchor": "app-07",
       "title": "Notification/Email Allocation and Frequency Optimization",
-      "taxonomy_title": "Notification/email allocation and frequency",
       "paradigm_id": "binary-and-mixed-integer-programming",
-      "classification": "BIP",
-      "main_decision_variable": "User–message–time indicators",
-      "principal_constraint": "Frequency, channel, quota, and global budgets",
-      "relationship": "Natural MP reformulation",
-      "representative_citation_keys": [
-        "zhang2020billion",
-        "zhao2018notification"
-      ],
-      "all_application_citation_keys": [
+      "citation_keys": [
         "zhang2020billion",
         "zhao2018notification"
       ]
@@ -180,16 +123,8 @@
       "id": 8,
       "anchor": "app-08",
       "title": "Test-Time Reasoning and Exploration-Budget Allocation",
-      "taxonomy_title": "Test-time reasoning and exploration budget",
       "paradigm_id": "binary-and-mixed-integer-programming",
-      "classification": "BIP/MCKP",
-      "main_decision_variable": "Query–compute-level choices",
-      "principal_constraint": "Exactly one level; global compute",
-      "relationship": "Natural MP reformulation",
-      "representative_citation_keys": [
-        "snell2025testtime"
-      ],
-      "all_application_citation_keys": [
+      "citation_keys": [
         "snell2025testtime"
       ]
     },
@@ -197,16 +132,8 @@
       "id": 9,
       "anchor": "app-09",
       "title": "Optimal Decision-Tree Construction",
-      "taxonomy_title": "Optimal decision-tree construction",
       "paradigm_id": "binary-and-mixed-integer-programming",
-      "classification": "MILP",
-      "main_decision_variable": "Splits, leaf assignments, predictions",
-      "principal_constraint": "Tree logic and misclassification linearization",
-      "relationship": "Explicit formulation",
-      "representative_citation_keys": [
-        "bertsimas2017oct"
-      ],
-      "all_application_citation_keys": [
+      "citation_keys": [
         "bertsimas2017oct"
       ]
     },
@@ -214,16 +141,8 @@
       "id": 10,
       "anchor": "app-10",
       "title": "Best Subset Selection",
-      "taxonomy_title": "Best subset selection",
       "paradigm_id": "binary-and-mixed-integer-programming",
-      "classification": "MIQP",
-      "main_decision_variable": "Coefficients θ_j, indicators z_j",
-      "principal_constraint": "Cardinality and coefficient linking",
-      "relationship": "Explicit formulation",
-      "representative_citation_keys": [
-        "bertsimas2016subset"
-      ],
-      "all_application_citation_keys": [
+      "citation_keys": [
         "bertsimas2016subset"
       ]
     },
@@ -231,16 +150,8 @@
       "id": 11,
       "anchor": "app-11",
       "title": "Constrained Maximum-Inner-Product Retrieval",
-      "taxonomy_title": "Constrained maximum-inner-product retrieval",
       "paradigm_id": "binary-and-mixed-integer-programming",
-      "classification": "MILP/MIQP",
-      "main_decision_variable": "Retrieved-item indicators z_i",
-      "principal_constraint": "Cardinality, coverage/fairness; pairwise diversity",
-      "relationship": "Natural MP reformulation",
-      "representative_citation_keys": [
-        "hirata2023categorical"
-      ],
-      "all_application_citation_keys": [
+      "citation_keys": [
         "hirata2023categorical"
       ]
     },
@@ -248,16 +159,8 @@
       "id": 12,
       "anchor": "app-12",
       "title": "Mixed-Precision Neural-Network Quantization",
-      "taxonomy_title": "Mixed-precision neural-network quantization",
       "paradigm_id": "binary-and-mixed-integer-programming",
-      "classification": "BIP/ILP",
-      "main_decision_variable": "Layer–bit-width assignments",
-      "principal_constraint": "Exactly one width; size or latency budget",
-      "relationship": "Explicit formulation",
-      "representative_citation_keys": [
-        "yao2021hawq"
-      ],
-      "all_application_citation_keys": [
+      "citation_keys": [
         "yao2021hawq"
       ]
     },
@@ -265,16 +168,8 @@
       "id": 13,
       "anchor": "app-13",
       "title": "Diversity-Aware Recommendation",
-      "taxonomy_title": "Diversity-aware recommendation",
       "paradigm_id": "binary-and-mixed-integer-programming",
-      "classification": "BQP/MIQP",
-      "main_decision_variable": "List indicators z_i",
-      "principal_constraint": "Cardinality; pairwise similarity penalty",
-      "relationship": "Natural MP reformulation",
-      "representative_citation_keys": [
-        "zhang2008monotony"
-      ],
-      "all_application_citation_keys": [
+      "citation_keys": [
         "zhang2008monotony"
       ]
     },
@@ -282,17 +177,8 @@
       "id": 14,
       "anchor": "app-14",
       "title": "k-Means Clustering",
-      "taxonomy_title": "Globally optimized k-means clustering",
       "paradigm_id": "binary-and-mixed-integer-programming",
-      "classification": "MIQP/ MINLP/ MILP",
-      "main_decision_variable": "Assignments z_ik, centroids μ_k",
-      "principal_constraint": "Exactly one cluster; assignment–centroid coupling",
-      "relationship": "Explicit formulation",
-      "representative_citation_keys": [
-        "agoston2024kmeans",
-        "burgard2023clustering"
-      ],
-      "all_application_citation_keys": [
+      "citation_keys": [
         "agoston2024kmeans",
         "burgard2023clustering"
       ]
@@ -301,16 +187,8 @@
       "id": 15,
       "anchor": "app-15",
       "title": "Video Frame or Keyframe Selection",
-      "taxonomy_title": "Video frame or keyframe selection",
       "paradigm_id": "binary-and-mixed-integer-programming",
-      "classification": "BQP/IQP",
-      "main_decision_variable": "Frame indicators z_i",
-      "principal_constraint": "Cardinality/temporal budget; pairwise redundancy",
-      "relationship": "Explicit formulation",
-      "representative_citation_keys": [
-        "fang2026keyframe"
-      ],
-      "all_application_citation_keys": [
+      "citation_keys": [
         "fang2026keyframe"
       ]
     },
@@ -318,16 +196,8 @@
       "id": 16,
       "anchor": "app-16",
       "title": "Group Lasso as SOCP",
-      "taxonomy_title": "Group Lasso",
       "paradigm_id": "conic-programming",
-      "classification": "SOCP",
-      "main_decision_variable": "Coefficients β_g, epigraphs t_g",
-      "principal_constraint": "Group-norm cones",
-      "relationship": "Equivalent formulation",
-      "representative_citation_keys": [
-        "yuan2006grouplasso"
-      ],
-      "all_application_citation_keys": [
+      "citation_keys": [
         "yuan2006grouplasso"
       ]
     },
@@ -335,16 +205,8 @@
       "id": 17,
       "anchor": "app-17",
       "title": "Sparse PCA as SDP",
-      "taxonomy_title": "Sparse PCA",
       "paradigm_id": "conic-programming",
-      "classification": "SDP",
-      "main_decision_variable": "Lifted matrix X\\succeq0",
-      "principal_constraint": "Trace normalization; rank relaxation; sparsity",
-      "relationship": "Explicit formulation",
-      "representative_citation_keys": [
-        "daspremont2004sparsepca"
-      ],
-      "all_application_citation_keys": [
+      "citation_keys": [
         "daspremont2004sparsepca"
       ]
     },
@@ -352,16 +214,8 @@
       "id": 18,
       "anchor": "app-18",
       "title": "Hyperparameter Optimization",
-      "taxonomy_title": "Hyperparameter optimization",
       "paradigm_id": "bilevel-programming",
-      "classification": "Bilevel",
-      "main_decision_variable": "Hyperparameters λ, weights θ",
-      "principal_constraint": "Validation outer/training inner",
-      "relationship": "Explicit formulation",
-      "representative_citation_keys": [
-        "franceschi2018bilevel"
-      ],
-      "all_application_citation_keys": [
+      "citation_keys": [
         "franceschi2018bilevel"
       ]
     },
@@ -369,16 +223,8 @@
       "id": 19,
       "anchor": "app-19",
       "title": "Neural Architecture Search",
-      "taxonomy_title": "Neural architecture search",
       "paradigm_id": "bilevel-programming",
-      "classification": "Bilevel",
-      "main_decision_variable": "Architecture λ, weights θ",
-      "principal_constraint": "Relaxed architecture outer/weight-training inner",
-      "relationship": "Explicit formulation",
-      "representative_citation_keys": [
-        "liu2019darts"
-      ],
-      "all_application_citation_keys": [
+      "citation_keys": [
         "liu2019darts"
       ]
     },
@@ -386,16 +232,8 @@
       "id": 20,
       "anchor": "app-20",
       "title": "Coreset Selection and Data Subsampling",
-      "taxonomy_title": "Coreset selection and data subsampling",
       "paradigm_id": "bilevel-programming",
-      "classification": "Bilevel",
-      "main_decision_variable": "Selection probabilities/indicators and weights",
-      "principal_constraint": "Coreset-size outer; selected-data training inner",
-      "relationship": "Explicit formulation",
-      "representative_citation_keys": [
-        "zhou2022coreset"
-      ],
-      "all_application_citation_keys": [
+      "citation_keys": [
         "zhou2022coreset"
       ]
     },
@@ -403,17 +241,8 @@
       "id": 21,
       "anchor": "app-21",
       "title": "Autonomous Scientific Discovery and AI Scientist Systems",
-      "taxonomy_title": "Autonomous scientific discovery",
       "paradigm_id": "bilevel-programming",
-      "classification": "Bilevel",
-      "main_decision_variable": "Objective design λ, candidate design x",
-      "principal_constraint": "Goal-evolution outer; scientific search inner",
-      "relationship": "Equivalent formulation",
-      "representative_citation_keys": [
-        "du2025saga",
-        "ma2024scientific"
-      ],
-      "all_application_citation_keys": [
+      "citation_keys": [
         "du2025saga",
         "ma2024scientific"
       ]
@@ -422,16 +251,8 @@
       "id": 22,
       "anchor": "app-22",
       "title": "Diffusion-Model Hyperparameter and Noise-Schedule Optimization",
-      "taxonomy_title": "Diffusion hyperparameter/noise-schedule optimization",
       "paradigm_id": "bilevel-programming",
-      "classification": "Bilevel",
-      "main_decision_variable": "Schedule λ, diffusion parameters θ",
-      "principal_constraint": "Quality outer; training/inference inner",
-      "relationship": "Explicit formulation",
-      "representative_citation_keys": [
-        "xiao2025diffusion"
-      ],
-      "all_application_citation_keys": [
+      "citation_keys": [
         "xiao2025diffusion"
       ]
     },
@@ -439,16 +260,8 @@
       "id": 23,
       "anchor": "app-23",
       "title": "Multi-Task Learning",
-      "taxonomy_title": "Multi-task learning",
       "paradigm_id": "multi-objective-optimization",
-      "classification": "Multi-objective",
-      "main_decision_variable": "Shared/task model parameters θ",
-      "principal_constraint": "Pareto order; simplex gradient QP",
-      "relationship": "Explicit formulation",
-      "representative_citation_keys": [
-        "sener2018multitask"
-      ],
-      "all_application_citation_keys": [
+      "citation_keys": [
         "momma2022multi",
         "sener2018multitask"
       ]
@@ -457,16 +270,8 @@
       "id": 24,
       "anchor": "app-24",
       "title": "Inverse Reinforcement Learning",
-      "taxonomy_title": "Inverse reinforcement learning",
       "paradigm_id": "inverse-optimization",
-      "classification": "Inverse optimization",
-      "main_decision_variable": "Reward weights θ",
-      "principal_constraint": "Expert policy optimality/Bellman inequalities",
-      "relationship": "Explicit formulation",
-      "representative_citation_keys": [
-        "ng2000irl"
-      ],
-      "all_application_citation_keys": [
+      "citation_keys": [
         "dong2018generalized",
         "dong2024towards",
         "ng2000irl"
@@ -476,16 +281,8 @@
       "id": 25,
       "anchor": "app-25",
       "title": "Contrastive Learning as DRO",
-      "taxonomy_title": "Contrastive learning as DRO",
       "paradigm_id": "distributionally-robust-optimization",
-      "classification": "DRO",
-      "main_decision_variable": "Encoder parameters θ, negative law Q",
-      "principal_constraint": "Divergence ambiguity around empirical negatives",
-      "relationship": "Explicit formulation",
-      "representative_citation_keys": [
-        "wu2023contrastive"
-      ],
-      "all_application_citation_keys": [
+      "citation_keys": [
         "wu2023contrastive"
       ]
     },
@@ -493,16 +290,8 @@
       "id": 26,
       "anchor": "app-26",
       "title": "Distributionally Robust DPO for LLM Alignment",
-      "taxonomy_title": "Distributionally robust DPO",
       "paradigm_id": "distributionally-robust-optimization",
-      "classification": "DRO",
-      "main_decision_variable": "Policy parameters θ, preference law Q",
-      "principal_constraint": "Wasserstein or KL ambiguity set",
-      "relationship": "Explicit formulation",
-      "representative_citation_keys": [
-        "xu2025robustdpo"
-      ],
-      "all_application_citation_keys": [
+      "citation_keys": [
         "xu2025robustdpo"
       ]
     },
@@ -510,16 +299,8 @@
       "id": 27,
       "anchor": "app-27",
       "title": "Data Subset Selection and Active Learning",
-      "taxonomy_title": "Data subset selection and active learning",
       "paradigm_id": "submodular-optimization",
-      "classification": "Submodular",
-      "main_decision_variable": "Selected set S",
-      "principal_constraint": "Cardinality; diminishing returns",
-      "relationship": "Explicit formulation",
-      "representative_citation_keys": [
-        "wei2015submodularity"
-      ],
-      "all_application_citation_keys": [
+      "citation_keys": [
         "wei2015submodularity"
       ]
     },
@@ -527,16 +308,8 @@
       "id": 28,
       "anchor": "app-28",
       "title": "Document Summarization",
-      "taxonomy_title": "Document summarization",
       "paradigm_id": "submodular-optimization",
-      "classification": "Submodular",
-      "main_decision_variable": "Selected sentence set S",
-      "principal_constraint": "Word budget; coverage and diversity",
-      "relationship": "Explicit formulation",
-      "representative_citation_keys": [
-        "lin2011summarization"
-      ],
-      "all_application_citation_keys": [
+      "citation_keys": [
         "lin2011summarization"
       ]
     },
@@ -544,16 +317,8 @@
       "id": 29,
       "anchor": "app-29",
       "title": "KV-Cache Eviction for LLM Inference",
-      "taxonomy_title": "KV-cache eviction for LLM inference",
       "paradigm_id": "submodular-optimization",
-      "classification": "Submodular",
-      "main_decision_variable": "Retained token set S_τ",
-      "principal_constraint": "Dynamic cache budget; heavy hitters plus recency",
-      "relationship": "Explicit formulation",
-      "representative_citation_keys": [
-        "zhang2023h2o"
-      ],
-      "all_application_citation_keys": [
+      "citation_keys": [
         "zhang2023h2o"
       ]
     },
@@ -561,16 +326,8 @@
       "id": 30,
       "anchor": "app-30",
       "title": "Generative Adversarial Networks",
-      "taxonomy_title": "Generative adversarial networks",
       "paradigm_id": "min-max-optimization",
-      "classification": "Min–max",
-      "main_decision_variable": "Generator G, discriminator D",
-      "principal_constraint": "Two-player saddle objective",
-      "relationship": "Explicit formulation",
-      "representative_citation_keys": [
-        "goodfellow2014gan"
-      ],
-      "all_application_citation_keys": [
+      "citation_keys": [
         "goodfellow2014gan"
       ]
     }

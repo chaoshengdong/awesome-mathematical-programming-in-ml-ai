@@ -48,12 +48,12 @@ def validate():
     errors = []
     catalog = json.loads(OUTPUT.read_text(encoding="utf-8"))
     apps = catalog["applications"]
-    if catalog.get("schema_version") != 2 or catalog.get("survey_url") != SURVEY_URL:
-        errors.append("Expected catalog schema version 2 and the survey's arXiv link")
+    if catalog.get("schema_version") != 3 or catalog.get("survey_url") != SURVEY_URL:
+        errors.append("Expected catalog schema version 3 and the survey's arXiv link")
     if [app["id"] for app in apps] != list(range(1, 31)):
         errors.append("Expected applications 1 through 30 exactly once, in order")
     if [app["anchor"] for app in apps] != [f"app-{i:02d}" for i in range(1, 31)]:
-        errors.append("Catalog application anchors must agree with their numbers")
+        errors.append("Catalog application anchors must agree with their internal IDs")
     counts = Counter(app["paradigm_id"] for app in apps)
     paradigms = catalog["paradigms"]
     if counts != PARADIGM_COUNTS or len(paradigms) != 10:
@@ -63,13 +63,9 @@ def validate():
     if next((a for a in apps if a["id"] == 2), {}).get("paradigm_id") != "linear-programming":
         errors.append("Network-flow tracking must be inside Linear Programming")
     refs = catalog["references"]
-    relationships = {"Explicit formulation", "Equivalent formulation", "Natural MP reformulation"}
     for app in apps:
-        if app["relationship"] not in relationships:
-            errors.append(f"Application {app['id']} has an invalid relationship label")
-        representative = set(app["representative_citation_keys"])
-        cited = set(app["all_application_citation_keys"])
-        if not representative or not representative <= cited or not cited <= refs.keys():
+        cited = set(app["citation_keys"])
+        if not cited or not cited <= refs.keys():
             errors.append(f"Application {app['id']} has missing or inconsistent citation keys")
     for key, record in refs.items():
         if record["key"] != key or not all(record.get(field) for field in ["title", "authors", "venue", "year", "url"]):
@@ -77,7 +73,7 @@ def validate():
         if urlsplit(record["url"]).scheme not in {"http", "https"}:
             errors.append(f"Reference {key} lacks a web URL")
     expected_ids = [f"app-{number:02d}" for number in range(1, 31)]
-    for relative in ["README.md", "docs/modeling-guide.md"]:
+    for relative in ["README.md"]:
         path = ROOT / relative
         if not path.exists():
             errors.append(f"Missing {relative}")
@@ -85,6 +81,8 @@ def validate():
         text = path.read_text(encoding="utf-8")
         if SURVEY_URL not in text:
             errors.append(f"{relative}: missing survey arXiv link")
+        if re.search(r"(?m)^#{3,6}\s+\d+[.)]\s", text):
+            errors.append(f"{relative}: application headings must not be numbered")
         matches = list(re.finditer(r'<a\s+(?:id|name)=["\'](app-\d{2})["\'][^>]*>', text))
         if [match.group(1) for match in matches] != expected_ids:
             errors.append(f"{relative}: expected application anchors app-01 through app-30 exactly once, in order")
@@ -97,10 +95,19 @@ def validate():
                 subsections = re.findall(r"(?m)^### (.+)$", text[:match.start()])
                 if not sections or sections[-1].lower() != "linear programming" or not subsections or subsections[-1] != "LP with Network-Flow Structure":
                     errors.append(f"{relative}: tracking is not nested under the LP network-flow subsection")
-            if not re.search(r"https?://", block):
-                errors.append(f"{relative}: {match.group(1)} lacks a primary-source link")
-            if relative.endswith("modeling-guide.md") and "$$" not in block:
-                errors.append(f"{relative}: {match.group(1)} lacks displayed math")
+            heading = re.search(r"(?m)^#{3,6} .+$", block)
+            if not heading:
+                errors.append(f"{relative}: {match.group(1)} lacks an application heading")
+                continue
+            # Stop before the next paradigm or other section, including HTML anchors.
+            citations = re.split(r"(?m)^(?:#{1,6}\s|<a\s)", block[heading.end():], maxsplit=1)[0]
+            lines = [line.strip() for line in citations.splitlines() if line.strip()]
+            if not lines or any(not line.startswith("- ") or not re.search(r"\[[^\]]+\]\(https?://", line) for line in lines):
+                errors.append(f"{relative}: {match.group(1)} must contain citation bullets only")
+            links = {normalize_url(url) for url in re.findall(r"https?://[^\s)>\"]+", citations)}
+            for key in apps[index]["citation_keys"]:
+                if key in refs and normalize_url(refs[key]["url"]) not in links:
+                    errors.append(f"{relative}: {match.group(1)} lacks its cited paper {key}")
         if relative == "README.md":
             links = {normalize_url(url) for url in re.findall(r"https?://[^\s)>\"]+", text)}
             for key, record in refs.items():
@@ -144,9 +151,9 @@ def validate():
     if errors:
         raise SystemExit("Validation failed:\n" + "\n".join(f"- {error}" for error in errors))
     print(f"PASS: 30 applications, 10 paradigms, {len(refs)} reference records; all citation keys resolve.")
-    print(f"PASS: 30 README entries, 30 formulation entries, all primary-paper links, {local_links} local links/anchors.")
+    print(f"PASS: 30 unnumbered application headings with citation bullets only, all primary-paper links, {local_links} local links/anchors.")
     print("PASS: network-flow placement and arXiv-only manuscript links; no bundled source, bibliography, or PDF.")
-    print("These structural checks do not independently prove mathematical correctness or external URL availability.")
+    print("These structural checks do not independently verify bibliographic accuracy or external URL availability.")
 
 
 if __name__ == "__main__":
