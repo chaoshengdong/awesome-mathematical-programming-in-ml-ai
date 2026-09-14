@@ -446,4 +446,4 @@ This repository is released under the [MIT License](LICENSE), copyright © 2026 
 
 ## Acknowledgment
 
-The organization of this companion repository was inspired by [rishieraj/awesome-multimodal-agents](https://github.com/rishieraj/awesome-multimodal-agents). Its literature summaries and taxonomy are grounded in the accompanying mathematical-programming manuscript.
+This repository is maintained by the authors of Mathematical Programming in Machine Learning and Artificial Intelligence: A Unified Taxonomy of Models and Applications.
