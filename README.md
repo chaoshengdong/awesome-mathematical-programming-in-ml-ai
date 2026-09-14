@@ -234,8 +234,6 @@ If this repository supports your work, please cite the paper:
 }
 ```
 
-Please also cite the original papers for the methods you use. Their records are collected in the [application and reference catalog](data/applications.json).
-
 ## License
 
 This repository is released under the [MIT License](LICENSE), copyright © 2026 Chaosheng Dong. Linked research papers retain their respective licenses.
