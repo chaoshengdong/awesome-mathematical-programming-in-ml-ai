@@ -2,7 +2,7 @@
 
 # Awesome Mathematical Programming in ML & AI
 
-**A guide to the models behind learning, retrieval, recommendation, and AI systems.**
+**A guide to the mathematical programming models behind machine learning, and AI systems.**
 
 [![arXiv: 2609.07254](https://img.shields.io/badge/arXiv-2609.07254-b31b1b)](https://arxiv.org/abs/2609.07254)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
